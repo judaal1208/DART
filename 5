@@ -1,0 +1,19 @@
+import 'dart:io';
+
+void main() {
+  print('¿Cuántos números desea ingresar?');
+  String? input = stdin.readLineSync();
+  int n = int.parse(input!);
+
+  double suma = 0;
+
+  for (int i = 0; i < n; i++) {
+    print('Ingrese el número ${i + 1}:');
+    String? numeroInput = stdin.readLineSync();
+    double numero = double.parse(numeroInput!);
+    suma += numero;
+  }
+
+  double promedio = suma / n;
+  print('El promedio de los $n números ingresados es: $promedio');
+}
