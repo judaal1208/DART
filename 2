@@ -1,0 +1,22 @@
+void main() {
+  int numero = 13; // Aquí puedes inicializar el número directamente si prefieres
+  
+  bool esPrimo = true;
+
+  if (numero < 2) {
+    esPrimo = false;
+  } else {
+    for (int i = 2; i <= numero ~/ 2; i++) {
+      if (numero % i == 0) {
+        esPrimo = false;
+        break;
+      }
+    }
+  }
+
+  if (esPrimo) {
+    print('El número $numero es primo.');
+  } else {
+    print('El número $numero no es primo.');
+  }
+}
