@@ -1,0 +1,14 @@
+import 'dart:io';
+
+void main() {
+  print('Ingrese una lista de números separados por espacios:');
+  String lista = stdin.readLineSync()!;
+
+  List<String> numerosStr = lista.split(' ');
+  List<int> numeros = numerosStr.map(int.parse).toList();
+
+  int suma = numeros.reduce((a, b) => a + b);
+  double promedio = suma / numeros.length;
+
+  print('El promedio de la lista de números es: $promedio');
+}
