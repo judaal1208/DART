@@ -1,0 +1,21 @@
+import 'dart:io';
+
+void main() {
+  List<String> estudiantes = [];
+
+  while (true) {
+    print('Ingrese el nombre de un estudiante (o escriba "salir" para terminar):');
+    String? input = stdin.readLineSync();
+
+    if (input == 'salir') {
+      break;
+    } else if (input != null && input.isNotEmpty) {
+      estudiantes.add(input);
+    }
+  }
+
+  print('Lista de estudiantes ingresados:');
+  for (String estudiante in estudiantes) {
+    print(estudiante);
+  }
+}
