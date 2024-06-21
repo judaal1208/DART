@@ -1,0 +1,23 @@
+import 'dart:io';
+import 'dart:math';
+
+void main() {
+  print('Ingrese el número de números aleatorios a generar:');
+  String? input = stdin.readLineSync();
+  int n = int.parse(input!);
+
+  print('Ingrese el valor mínimo del rango:');
+  String? minInput = stdin.readLineSync();
+  int min = int.parse(minInput!);
+
+  print('Ingrese el valor máximo del rango:');
+  String? maxInput = stdin.readLineSync();
+  int max = int.parse(maxInput!);
+
+  Random random = Random();
+  print('Números aleatorios generados:');
+  for (int i = 0; i < n; i++) {
+    int randomNumber = min + random.nextInt(max - min + 1);
+    print(randomNumber);
+  }
+}
